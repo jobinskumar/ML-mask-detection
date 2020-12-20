@@ -14,7 +14,9 @@ export class MlMaskDetectionComponent implements OnInit {
 
   constructor(private mlMaskDetectionService: MlMaskDetectionService) {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.mlMaskDetectionService.init();
+  }
 
   startAction(webcamContainer: HTMLElement): void {
     this.webcamContainer = webcamContainer;
