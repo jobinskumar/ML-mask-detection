@@ -1,0 +1,35 @@
+<div class="container">
+  <button *ngIf="prediction?.length > 0" class="close-btn" (click)="stopAction()">
+    <span>&times;</span>
+  </button>
+  <div class="first-half" #webcamContainer>
+    <button
+      class="btn"
+      *ngIf="showStartBtn"
+      (click)="startAction(webcamContainer)"
+    >
+      START
+    </button>
+    <img class="loader" *ngIf="loading" src="assets/loader.gif" alt="" />
+  </div>
+
+  <div class="result" *ngFor="let result of prediction">
+    <p [class]="result.className" *ngIf="result.probability > 0.95">
+      {{ result.className === "without-mask" ? "No Mask" : "Mask" }}
+    </p>
+  </div>
+
+  <!-- <span class="result" *ngFor="let result of prediction">
+    <span [class]="result.className" *ngIf="result.probability > 0.75">{{
+      result.className
+    }}</span>
+  </span> -->
+
+  <div class="second-half">
+    <h3>Machine Learning<br /><span>Detect face with/without mask</span></h3>
+    <p>
+      This is a sample ML in client side without any server support. This app
+      purely works in browser
+    </p>
+  </div>
+</div>

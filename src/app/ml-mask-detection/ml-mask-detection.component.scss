@@ -1,0 +1,103 @@
+:host {
+  $white-transparent-background: rgb(255 255 255 / 0.3);
+  $border-radius: 8px;
+
+  .container {
+    height: 70vh;
+    max-width: 345px;
+
+    .close-btn {
+      padding: 0px;
+      background: transparent;
+      border: none;
+      font-size: 2rem;
+      display: block;
+      margin: auto;
+      margin-bottom: -35px;
+      margin-right: 6px;
+      position: relative;
+      text-shadow: 0px 0px 8px #fff;
+      outline: none;
+      cursor: pointer;
+    }
+
+    .first-half {
+      height: 60%;
+      display: flex;
+      background: $white-transparent-background;
+      border-radius: $border-radius;
+
+      ::ng-deep canvas {
+        border-radius: 8px;
+      }
+
+      .loader {
+        height: fit-content;
+        margin: auto;
+        opacity: 0.45;
+        border-radius: 50%;
+      }
+
+      .btn {
+        border: none;
+        padding: 15px;
+        background: -webkit-gradient(linear,
+            left top,
+            right top,
+            from(#0072ff),
+            to(#00d4ff));
+        background: linear-gradient(90deg, #0072ff 0%, #00d4ff 100%);
+        color: #fff;
+        cursor: pointer;
+        border-radius: 4px;
+        margin: auto;
+        font-size: 1rem;
+      }
+    }
+
+    .result {
+      position: relative;
+
+      p {
+        padding: 10px;
+        margin-top: -40px;
+        border-bottom-left-radius: 8px;
+        border-bottom-right-radius: 8px;
+        color: white;
+        line-height: 20px;
+        font-size: 18px;
+
+        &.without-mask {
+          background: #c62828;
+        }
+
+        &.with-mask {
+          background: #00796b;
+        }
+      }
+    }
+
+    .second-half {
+      background: $white-transparent-background;
+      padding: 15px;
+      border-radius: $border-radius;
+      margin-top: 5px;
+
+      h3 {
+        font-size: 1.5rem;
+        padding-bottom: 15px;
+        line-height: 1.15rem;
+
+        span {
+          color: #494848;
+          font-size: 1rem;
+        }
+      }
+
+      p {
+        font-size: 1rem;
+        color: #3a3a3a;
+      }
+    }
+  }
+}
