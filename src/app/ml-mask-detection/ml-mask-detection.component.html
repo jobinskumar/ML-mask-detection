@@ -17,19 +17,27 @@
     <p [class]="result.className" *ngIf="result.probability > 0.95">
       {{ result.className === "without-mask" ? "No Mask" : "Mask" }}
     </p>
+    <p class="no-result">
+      Please steady your face
+    </p>
   </div>
 
-  <!-- <span class="result" *ngFor="let result of prediction">
-    <span [class]="result.className" *ngIf="result.probability > 0.75">{{
-      result.className
-    }}</span>
-  </span> -->
+  <!-- <div class="result" >
+    <p class="with-mask" >
+      mask
+    </p>
+    <p class="no-result">
+      Please steady your face
+    </p>
+  </div> -->
 
   <div class="second-half">
     <h3>Machine Learning<br /><span>Detect face with/without mask</span></h3>
     <p>
-      This is a sample ML in client side without any server support. This app
-      purely works in browser
+      This is an experiment on Machine Learning in browser with the help of Teachable Machines with Google.
     </p>
+    <br>
+    <a href="https://teachablemachine.withgoogle.com/">Teachable Machine</a><br><br>
+    Git repo of this example: <a href="https://github.com/jobinskumar/ML-mask-detection">@jobinskumar/ML-mask-detection</a>
   </div>
 </div>

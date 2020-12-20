@@ -41,11 +41,13 @@
       .btn {
         border: none;
         padding: 15px;
-        background: -webkit-gradient(linear,
-            left top,
-            right top,
-            from(#0072ff),
-            to(#00d4ff));
+        background: -webkit-gradient(
+          linear,
+          left top,
+          right top,
+          from(#0072ff),
+          to(#00d4ff)
+        );
         background: linear-gradient(90deg, #0072ff 0%, #00d4ff 100%);
         color: #fff;
         cursor: pointer;
@@ -66,6 +68,8 @@
         color: white;
         line-height: 20px;
         font-size: 18px;
+        z-index: 2;
+        position: relative;
 
         &.without-mask {
           background: #c62828;
@@ -73,6 +77,10 @@
 
         &.with-mask {
           background: #00796b;
+        }
+
+        &.no-result {
+          z-index: 1;
         }
       }
     }
