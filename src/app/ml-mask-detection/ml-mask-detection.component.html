@@ -14,7 +14,7 @@
   </div>
 
   <div class="result" *ngFor="let result of prediction">
-    <p [class]="result.className" *ngIf="result.probability > 0.95">
+    <p [class]="result.className" *ngIf="result.probability > 0.85">
       {{ result.className === "without-mask" ? "No Mask" : "Mask" }}
     </p>
     <p class="no-result">
